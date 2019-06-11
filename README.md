@@ -1,3 +1,7 @@
+This fork is created to work with the updated SweetAlert2 api from v7.0.0.  It has a slightly different setup (see below).
+
+This fork is also compatible with the <a href="https://github.com/Atrox/sweetify">Sweetify gem</a>.
+
 sweet-alert2-rails
 ==================
 
@@ -28,26 +32,22 @@ Rails >= 4.2, tested with Rails 5
 Add the SweetAlert2 and sweet-alert2-rails to your Gemfile:
 
 ```ruby
-gem 'rails-assets-sweetalert2', '~> 5.1.1', source: 'https://rails-assets.org'
 gem 'sweet-alert2-rails'
 ```
 
 Add the following to application.js:
 
 ```javascript
-//= require sweetalert2
 //= require sweet-alert2-rails
 ```
 
 Note : if you're using Rails >= 5.1, you need to inject before this plugin `jquery` and `jquery-ujs` because they are not dependencies anymore. Read https://github.com/rails/jquery-rails#installation for more information.
 
 
-Add the following to application.css:
+Load SweetAlert2 from CDN
 
-```css
-/*
- *= require sweetalert2
- */
+```
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 ```
 
 Try it:
